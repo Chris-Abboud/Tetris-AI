@@ -19,6 +19,6 @@ To ensure that the game will operatate on your machine, python must be first ins
 >- Left Arrow: Move Left
 >- Down Arrow: Move Down
 
-Note that overtime the shapes will start to drop faster and faster, so although it may seem a bit easy at first it can become a bit hectic towards the end. Have Fun!
+Note that overtime the shapes will start to drop faster and faster, so although it may seem a bit easy at first it can become a bit hectic towards the end. Have fun!
 
 
