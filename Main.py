@@ -12,6 +12,7 @@ import time
 pygame.init() # Initialize Pygame modules
 Outlines = Grid() # Generates Grid Outlines
 Grid = [[0]*10 for pos in range(20)] # Generates Grid 10x20
+GameOver = False
 
 screen = pygame.display.set_mode((401, 870))
 
@@ -77,6 +78,9 @@ while running:
         ShapeNumber+=1
         oldCords = AllShapes[ShapeNumber].cordinates
 
+        if not canMoveDown(Grid, FindBottomCords(AllShapes[ShapeNumber].cordinates)):
+            GameOver = True
+
         Grid = fillWithNum(Grid, AllShapes[ShapeNumber].cordinates, AllShapes[ShapeNumber].number)
 
     #Automatic Move Down
@@ -141,13 +145,22 @@ while running:
                     StagTimer = time.time()
 
     #Draws grid   
-    drawGrid(Grid, screen)
-    Outlines.draw(screen) #Will Draw Grid
-    Grid = fillWithNum(Grid, AllShapes[ShapeNumber].cordinates, AllShapes[ShapeNumber].number)
+    if not GameOver:
+        drawGrid(Grid, screen)
+        Outlines.draw(screen) #Will Draw Grid
+        Grid = fillWithNum(Grid, AllShapes[ShapeNumber].cordinates, AllShapes[ShapeNumber].number)
 
-    show_score(textX, textY, screen, Score, font)
-    show_level(textX + 225, textY, screen, level, font)
-    pygame.display.update()
+        show_score(textX, textY, screen, Score, font)
+        show_level(textX + 225, textY, screen, level, font)
+        pygame.display.update()
+    else:
+        Grid = [[0]*10 for pos in range(20)]
+        show_GameOver(80, 400, screen, font)
+        show_score(textX, textY, screen, Score, font)
+        show_level(textX + 225, textY, screen, level, font)
+        pygame.display.update()
+        time.sleep(5)
+        break
 
 
 # %%

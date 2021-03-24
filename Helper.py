@@ -169,4 +169,8 @@ def show_score(x,y, screen, Score, font):
 def show_level(x,y, screen, level, font):
     Level = font.render("LEVEL: " + str(level), True, (255,255,255))
     screen.blit(Level, (x, y))
+
+def show_GameOver(x,y, screen, font):
+    GameOver = font.render("GAME OVER!!!", True, (255,255,255))
+    screen.blit(GameOver, (x, y))
 # %%
