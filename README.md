@@ -1,6 +1,6 @@
 <center> <h1>Tetris</h1> </center>
 
-<p align="center"><img src="Assets\Preview.gif" alt="Tetris" width = "200"</p>
+<p align="center"><img src="Assets\Preview.gif" alt="Tetris" width = "250"</p>
 
 <center> A simple version of tetris that you can download and play for fun. </center>
 
