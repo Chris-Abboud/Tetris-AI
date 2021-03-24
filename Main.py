@@ -17,7 +17,7 @@ GameOver = False
 screen = pygame.display.set_mode((401, 870))
 
 pygame.display.set_caption("Tetris - Developed by Christopher Abboud")
-icon = pygame.image.load('Tetris icon.png')
+icon = pygame.image.load('Assets\TetrisIcon.png')
 pygame.display.set_icon(icon)
 
 FPS = 144
@@ -33,7 +33,7 @@ Level = 1
 AllShapes = []
 
 #Background Music
-mixer.music.load('Tetris Main Theme.mp3')
+mixer.music.load('Assets\Tetris Main Theme.mp3')
 mixer.music.play(-1)#Loop
 level = 1
 
@@ -66,7 +66,7 @@ while running:
                 count+=1
                 Grid = DeleteRow(Grid, i)
                 if count == 1:
-                    TetrisSound =  pygame.mixer.Sound('TetrisSound.wav')
+                    TetrisSound =  pygame.mixer.Sound('Assets\TetrisSound.wav')
                 Score+=30
                 TetrisSound.play()
 
