@@ -16,7 +16,7 @@ GameOver = False
 
 screen = pygame.display.set_mode((401, 870))
 
-pygame.display.set_caption("Tetris")
+pygame.display.set_caption("Tetris - Developed by Christopher Abboud")
 icon = pygame.image.load('Tetris icon.png')
 pygame.display.set_icon(icon)
 

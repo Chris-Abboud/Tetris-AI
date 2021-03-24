@@ -1,1 +1,0 @@
-drawGrid(Grid, screen)
